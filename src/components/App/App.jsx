@@ -11,11 +11,6 @@ function App() {
   const fetchGallery = () => {
     console.log('In fetch function')
     axios
-    // ({
-      // method: "GET",
-      // url: "/api/gallery"
-
-  // })
     .get("/api/gallery")
     .then((response) => {
       console.log(response)
