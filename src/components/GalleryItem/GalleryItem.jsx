@@ -45,6 +45,8 @@ return (
  )}
  <button data-testid="like" onClick = {handleLike}>Like</button>
  </div>
+);
+}
     
     
 export default GalleryItem
