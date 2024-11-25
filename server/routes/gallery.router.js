@@ -9,7 +9,7 @@ router.put('/like/:id', (req, res) => {
 
   let queryText = `
   UPDATE "gallery" SET "likes"="likes" +1
-  WHERE "id:=$1;
+  WHERE id=$1;
   `;
 
   pool
@@ -27,7 +27,7 @@ router.put('/like/:id', (req, res) => {
 // GET /gallery
 router.get('/api/gallery', (req, res) => {
   // code here
-  const sqlText = 
+  const sqlText = `SELECT * FROM gallery ORDER BY "title";`;
   // what are we selecting from the server
 
 pool.query(sqlText)
