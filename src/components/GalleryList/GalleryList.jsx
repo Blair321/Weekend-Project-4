@@ -2,8 +2,8 @@ import { useState, useEffect} from 'react';
 import axios from 'axios'
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function galleryList()
-	Const [galleryItems, setGalleryItems] = useState([]);
+function GalleryList() {
+	const [galleryItems, setGalleryItems] = useState([]);
 
 
 const setGalleryItem =()=>
@@ -37,5 +37,6 @@ return (
 
 );
 
+}
 
 export default GalleryList;

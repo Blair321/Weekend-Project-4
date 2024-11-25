@@ -12,8 +12,7 @@ router.put('/like/:id', (req, res) => {
   WHERE id=$1;
   `;
 
-  pool
-  .query(queryText, [picID])
+  pool.query(queryText, [picID])
   .then((response) => {
     res.sendStatus(200);
   })
@@ -25,7 +24,7 @@ router.put('/like/:id', (req, res) => {
 
 
 // GET /gallery
-router.get('/api/gallery', (req, res) => {
+router.get('/', (req, res) => {
   // code here
   const sqlText = `SELECT * FROM gallery ORDER BY "title";`;
   // what are we selecting from the server
