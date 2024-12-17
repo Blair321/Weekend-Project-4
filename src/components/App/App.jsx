@@ -1,31 +1,6 @@
-import React from "react";
-import {useEffect, useState} from "react";
-import axios from "axios";
-
-import GalleryList from "../GalleryList/GalleryList";
-import './App.css'
 
 function App() {
-  const [galleryItems, fetchGalleryItems] = useState([]);
-
-  const fetchGallery = () => {
-    console.log('In fetch function')
-    axios
-    .get("/api/gallery")
-    .then((response) => {
-      console.log(response)
-      fetchGallery(response.data);
-    })
-    .catch((error) => {
-      console.log('Oh no, there was an error in your GET request: ', error)
-      res.sendStatus(error)
-    })
-  }
-
-  useEffect(() => {
-  fetchGallery();
-}, []);
-
+  
     return (
       <div data-testid="app">
         <header>
