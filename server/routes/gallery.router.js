@@ -12,6 +12,14 @@ router.put('/like/:id', (req, res) => {
 // GET /gallery
 router.get('/', (req, res) => {
   // code here
+  const queryString = `SELECT * FROM "gallery" ORDER BY id ASC;`;
+  pool.query(queryString).then((reuslts)=>{
+    res.send(reuslts.rows);
+  }).catch((err)=>{
+    console.log(err);
+    res.sendStatus(400)
+    
+  })
   
 })
 ;
