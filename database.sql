@@ -9,6 +9,14 @@ CREATE TABLE "gallery" (
 INSERT INTO "gallery" 
 ("url", "title", "description")
 VALUES
-('images/goat_small.jpg', 'Goat!', 'Photo of a goat taken at Glacier National Park.'),
-('images/goat_stache.png', 'Goat Stache!', 'Photo of a mustachioed goat taken at Glacier National Park.');
+('images/Family.jpg', 'My Family', 'Full family a few years back.'),
+('images/GFandMe.jpeg', 'My Gf and Me', 'Photo of me and my GF in a Park.'),
+('images/huntinghobby.jpeg', 'Duck Hunting', 'Rare duck I hunted last year.'),
+('images/meandmom.jpg', 'Mom and Me', 'Walking mom down the aisle.'),
+('images/piersonandme.JPG', 'Me and Pup', 'Me and my childhood dog.'),
+('images/step-family.jpg', 'My step family', 'My step family and me at a wedding.');
+
+SELECT * FROM "gallery" ORDER BY id ASC;
+DELETE FROM "gallery" WHERE id=2;
+UPDATE "gallery" SET likes=likes+1 WHERE id=4;
   

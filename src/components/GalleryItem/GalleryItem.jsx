@@ -16,9 +16,9 @@ function addLike() {
 }
 
     return (
-      <div>
+      <div data-testid="galleryItem">
           <h1>{galleryItem.galleryItem.title}</h1>
-          <div onClick={ ()=> {setShowPic(!showPic)}}>
+          <div data-testid="toggle"onClick={ ()=> {setShowPic(!showPic)}}>
             {
               showPic ?
           <img src={galleryItem.galleryItem.url} width='250px'/>
@@ -26,7 +26,7 @@ function addLike() {
           <p>{galleryItem.galleryItem.description}</p>
             }
          </div>
-         <p>Likes: {galleryItem.galleryItem.likes} <button onClick={addLike}>+</button></p>
+         <p>Likes: {galleryItem.galleryItem.likes} <button data-testid="like"onClick={addLike}>+</button></p>
       </div>
     );
 }

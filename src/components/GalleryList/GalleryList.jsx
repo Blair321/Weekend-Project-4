@@ -23,7 +23,7 @@ useEffect(()=>{
   
   
   return (
-      <div>
+      <div data-testid="galleryList">
           <h1>GalleryList</h1>
 {galleryItems.map((galleryItem,index)=>(
   <GalleryItem key={index} galleryItem={ galleryItem}/>
