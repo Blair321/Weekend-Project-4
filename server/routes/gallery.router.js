@@ -3,9 +3,17 @@ const router = express.Router();
 const pool = require("../modules/pool");
 
 // PUT /gallery/like/:id
-router.put('/like/:id', (req, res) => {
+router.put('/', (req, res) => {
   // code here
- 
+ console.log('in/api/gallery PUT:', req.body, req.query);
+ const queryString = `UPDATE "gallery" SET likes=likes+1 WHERE id=$1;`
+ const values = [req.query.id];
+ pool.query( queryString, values).then((results)=>{
+res.sendStatus(200)
+ }).catch((err)=>{
+  console.log(err);
+  res.sendStatus(400)
+ })
 });
 
 
